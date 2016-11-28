@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
+var MongoDB = require('./routes/mongodbhandler');
 var users = require('./routes/users');
 
 var app = express();
@@ -54,6 +55,10 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+});
+
+MongoDB.connect(MongoDB.MONGODB_URL, function () {
+  console.log('Connected to mongo at: ' + MongoDB.MONGODB_URL);
 });
 
 

@@ -322,7 +322,7 @@
             type: "GET",
             url: result,
             success: function (data) {
-                var intensity = data * 100;
+                var intensity = data.result * 100;
                 heatmap = new google.maps.visualization.HeatmapLayer({
                     data: getPoints(loc)
 

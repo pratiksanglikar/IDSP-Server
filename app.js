@@ -57,9 +57,9 @@ app.use(function(err, req, res, next) {
   });
 });
 
-MongoDB.connect(MongoDB.MONGODB_URL, function () {
-  console.log('Connected to mongo at: ' + MongoDB.MONGODB_URL);
-});
+// MongoDB.connect(MongoDB.MONGODB_URL, function () {
+//   console.log('Connected to mongo at: ' + MongoDB.MONGODB_URL);
+// });
 
 
 module.exports = app;

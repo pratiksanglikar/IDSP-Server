@@ -338,10 +338,8 @@
 //                alert('Error: ' + e.message);
 //            }
 //        });
-        $.get(result, function(data) {
+        $.get(result, null, function(data) {
             alert("Success!" + data);
-        }, function( error) {
-            alert("error")
         });
     }
 

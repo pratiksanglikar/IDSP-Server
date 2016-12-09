@@ -253,60 +253,58 @@
     function changeGradient(i) {
         var gradient;
         if (i <= 1) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(128, 128, 128, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(128, 128, 128, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
         if (i > 1 && i <= 10) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(165,42,42, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(165,42,42, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 10 && i <= 20) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba( 255, 165,0, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba( 255, 165,0, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 20 && i <= 30) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(255, 255, 0, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(255, 255, 0, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 30 && i <= 40) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(50, 255, 20, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(50, 255, 20, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 40 && i <= 50) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(0, 128, 0, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(0, 128, 0, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 50 && i <= 60) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(0, 0, 255, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(0, 0, 255, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 60 && i <= 70) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(255, 20, 147, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(255, 20, 147, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 70 && i <= 80) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(218, 12, 238, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(218, 12, 238, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 80 && i <= 90) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(154, 47, 65, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(154, 47, 65, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
 
         if (i > 90 && i <= 100) {
-            gradient = ['rgba(0, 255, 255, 0)', 'rgba(255, 0, 0, 1)', 'rgba(0, 0, 0, 1)']
+            gradient = ['rgba(0, 255, 255, 0)', 'rgba(255, 0, 0, 1)']
             heatmap.set('gradient', heatmap.get('gradient') ? null : gradient);
         }
-
-
     }
     function createHeatmap() {
         heatmap.setMap(null);
@@ -348,6 +346,8 @@
                 heatmap.setMap(map);
                 //heatmap.set(heatmap.get('center') ? null : center);
                 heatmap.set('radius', heatmap.get('radius') ? null : 40);
+        },function(error) {
+            alert("No data found!");
         });
     }
 
